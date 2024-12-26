@@ -117,15 +117,48 @@
         <br>
         <p1>Ankara has a castle</p1>
     </div>
+    <div>
+        <h1> kullanıcı hesabı</h1>
+        <form id="userform">
+            <label for="fname">First name:
+            </label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="fname">
+            <input type="submit" value="submit">
+            <br>
+        </form>
+    </div>
+</main>
+<script>
+    const form = document.getElemantyById("userform");
+
+    form.addEventListener('submit', function(event) {
+        const firstName = document.getElementById("fname").value.trim();
+        const lastName = document.getElementById("lname").value.trim();
+
+        if(!firstName || lastName) {
+            alert("Lütfen tüm alanları giriniz!")
+            return;
+        }
+
+        console.log("Veriler backende gönderiliyor...");
+        console.log("First Name: ", firstName);
+        console.log("Last Name: ", lastName) ;
+        alert("Merhaba ${firstName} {lastName}, verileriniz başarıyla gönderildi.")
+        })
+</script>
 
     
     <footer id="iletisim">
         <p>&copy; 2024 Web Tasarımı Haber Sitesi | Tüm Hakları Saklıdır.</p>
         <p><a href="mailto:info@webhaber.com" style="color: #fff;">Bize Ulaşın</a></p>
     </footer>
+   
 
 
-</main>
+
         
      
 
