@@ -86,7 +86,7 @@
             }
     
             // Doğum tarihi kontrolü ve burç hesaplaması
-            const birthDate = new (dob);
+            const birthDate = new Date(dob);
             const zodiacSign = getZodiacSign(birthDate);
     
             // Burç yorumu
